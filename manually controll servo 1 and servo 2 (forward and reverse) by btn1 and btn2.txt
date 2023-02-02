@@ -1,0 +1,35 @@
+// manually controlling servo1 and servo 2 (forward and reverse)by btn1 and btn2
+
+void manualbutton(){
+ 
+if(buttonstate1 ==1)
+{
+
+servopos = servopos +1;
+if(servopos>90)
+{
+servopos=90;  
+}
+servo1.write(servopos);
+servo2.write(servopos);
+  
+}
+
+}
+
+void manualbuttonreverse(){
+if(buttonstate2==1)
+{
+servopos = servopos -1;  
+
+ if(servopos<0)
+{
+   servopos =0;
+}
+
+
+servo1.write(servopos);
+servo2.write(servopos);
+
+}
+}
